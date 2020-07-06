@@ -48,3 +48,17 @@ init: starting sh
 $
 ```
 
+**3. GDB**
+
+Run `make qemu-gdb` for keneral startup. Then open another cmd to attach to currently docker container:
+
+```shell
+$ docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+1025d4c9ab0a        vx6                 "/bin/bash"         38 seconds ago      Up 38 seconds                           sharp_leavitt
+$ docker exec -it 1025d4c9ab0a /bin/sh
+# gdb-multiarch
+```
+
+using `gdb-multiarch` for debugging purpose.
+
